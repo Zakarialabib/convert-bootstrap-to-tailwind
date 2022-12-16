@@ -13,26 +13,34 @@ class ConvertBootstrapToTailwindCommand extends Command
     protected $signature = 'analyze:views {--change}';
     protected $description = 'Analyze view files and suggest Bootstrap to Tailwind CSS class name changes';
 
-    public function handle(InputInterface $input, OutputInterface $output)
+    public function handle(InputInterface $input, OutputInterface $output): int
     {
         $comparer = new ConvertBootstrapToTailwind();
-
+    
         $viewFiles = $this->getViewFiles();
         foreach ($viewFiles as $viewFile) {
             $originalHtml = $this->getHtmlFromFile($viewFile);
             $modifiedHtml = $comparer->compare($originalHtml);
-
+    
             if ($modifiedHtml !== $originalHtml) {
-                if ($input->getOption('change')) {
-                    $this->writeHtmlToFile($viewFile, $modifiedHtml);
-                    $output->writeln("Changed Bootstrap class names in $viewFile");
-                } else {
-                    $output->writeln("Suggested changes for $viewFile:");
-                    $output->writeln($modifiedHtml);
-                }
+                $this->handleChangeOption($input, $output, $viewFile, $modifiedHtml);
             }
         }
+    
+        return 0;
     }
+    
+    protected function handleChangeOption(InputInterface $input, OutputInterface $output, string $viewFile, string $modifiedHtml): void
+    {
+        if ($input->getOption('change')) {
+            $this->writeHtmlToFile($viewFile, $modifiedHtml);
+            $output->writeln("Changed Bootstrap class names in $viewFile");
+        } else {
+            $output->writeln("Suggested changes for $viewFile:");
+            $output->writeln($modifiedHtml);
+        }
+    }
+    
 
     /**
      * Get an array of view file paths.
@@ -66,4 +74,11 @@ class ConvertBootstrapToTailwindCommand extends Command
     {
         file_put_contents($filePath, $html);
     }
+
+     // public function handle(): int
+    // {
+    //     $this->comment('All done');
+
+    //     return self::SUCCESS;
+    // }
 }
