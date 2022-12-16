@@ -4,7 +4,7 @@ namespace Zakarialabib\ConvertBootstrapToTailwind;
 
 class ConvertBootstrapToTailwind
 {
-        /**
+    /**
      * Map of Bootstrap class names to Tailwind class names.
      *
      * @var string[]
@@ -26,7 +26,7 @@ class ConvertBootstrapToTailwind
     /**
      * Convert Bootstrap class names to Tailwind class names in an HTML string.
      *
-     * @param string $html
+     * @param  string  $html
      * @return string
      */
     public function compare(string $html)
