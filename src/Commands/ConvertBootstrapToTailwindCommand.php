@@ -17,20 +17,20 @@ class ConvertBootstrapToTailwindCommand extends Command
     public function handle(InputInterface $input, OutputInterface $output): int
     {
         $comparer = new ConvertBootstrapToTailwind();
-    
+
         $viewFiles = $this->getViewFiles();
         foreach ($viewFiles as $viewFile) {
             $originalHtml = $this->getHtmlFromFile($viewFile);
             $modifiedHtml = $comparer->compare($originalHtml);
-    
+
             if ($modifiedHtml !== $originalHtml) {
                 $this->handleChangeOption($input, $output, $viewFile, $modifiedHtml);
             }
         }
-    
+
         return 0;
     }
-    
+
     protected function handleChangeOption(InputInterface $input, OutputInterface $output, string $viewFile, string $modifiedHtml): void
     {
         if ($input->getOption('change')) {
@@ -41,7 +41,6 @@ class ConvertBootstrapToTailwindCommand extends Command
             $output->writeln($modifiedHtml);
         }
     }
-    
 
     /**
      * Get an array of view file paths.
