@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "zakarialabib/convert-bootstrap-to-tailwind",
+    "description": "This is my package convert-bootstrap-to-tailwind",
     "keywords": [
-        ":vendor_name",
+        "Zakarialabib",
         "laravel",
-        ":package_slug"
+        "convert-bootstrap-to-tailwind"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/zakarialabib/convert-bootstrap-to-tailwind",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Zakarialabib",
+            "email": "58374576+Zakarialabib@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Zakarialabib\\ConvertBootstrapToTailwind\\": "src",
+            "Zakarialabib\\ConvertBootstrapToTailwind\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Zakarialabib\\ConvertBootstrapToTailwind\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Zakarialabib\\ConvertBootstrapToTailwind\\ConvertBootstrapToTailwindServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ConvertBootstrapToTailwind": "Zakarialabib\\ConvertBootstrapToTailwind\\Facades\\ConvertBootstrapToTailwind"
             }
         }
     },
