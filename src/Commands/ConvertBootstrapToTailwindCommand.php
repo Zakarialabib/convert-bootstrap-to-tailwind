@@ -14,7 +14,7 @@ class ConvertBootstrapToTailwindCommand extends Command
 
     protected $description = 'Analyze view files and suggest Bootstrap to Tailwind CSS class name changes';
 
-    public function handle(InputInterface $input, OutputInterface $output): int
+    public function handle()
     {
         $comparer = new CompareClass();
 
@@ -24,21 +24,23 @@ class ConvertBootstrapToTailwindCommand extends Command
             $modifiedHtml = $comparer->compare($originalHtml);
 
             if ($modifiedHtml !== $originalHtml) {
-                $this->handleChangeOption($input, $output, $viewFile, $modifiedHtml);
+                $this->handleChangeOption($viewFile, $modifiedHtml);
             }
         }
 
         return 0;
     }
 
-    protected function handleChangeOption(InputInterface $input, OutputInterface $output, string $viewFile, string $modifiedHtml): void
+    protected function handleChangeOption(string $viewFile, string $modifiedHtml): void
     {
-        if ($input->getOption('change')) {
+        $change = $this->option('change');
+
+        if ($change) {
             $this->writeHtmlToFile($viewFile, $modifiedHtml);
-            $output->writeln("Changed Bootstrap class names in $viewFile");
+            $this->info("Changed Bootstrap class names in $viewFile");
         } else {
-            $output->writeln("Suggested changes for $viewFile:");
-            $output->writeln($modifiedHtml);
+            $this->info("Suggested changes for $viewFile:");
+            $this->info($modifiedHtml);
         }
     }
 

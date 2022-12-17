@@ -1,4 +1,4 @@
-# This is my package convert-bootstrap-to-tailwind
+# Convert your laravel blade from Bootstrap to Tailwind
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/zakarialabib/convert-bootstrap-to-tailwind.svg?style=flat-square)](https://packagist.org/packages/zakarialabib/convert-bootstrap-to-tailwind)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/zakarialabib/convert-bootstrap-to-tailwind/run-tests?label=tests)](https://github.com/zakarialabib/convert-bootstrap-to-tailwind/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,14 +6,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/zakarialabib/convert-bootstrap-to-tailwind.svg?style=flat-square)](https://packagist.org/packages/zakarialabib/convert-bootstrap-to-tailwind)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/convert-bootstrap-to-tailwind.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/convert-bootstrap-to-tailwind)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -23,38 +15,12 @@ You can install the package via composer:
 composer require zakarialabib/convert-bootstrap-to-tailwind
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="convert-bootstrap-to-tailwind-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="convert-bootstrap-to-tailwind-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="convert-bootstrap-to-tailwind-views"
-```
-
 ## Usage
 
-```php
-$convertBootstrapToTailwind = new Zakarialabib\ConvertBootstrapToTailwind();
-echo $convertBootstrapToTailwind->echoPhrase('Hello, Zakarialabib!');
-```
+in order to analayse blade views and get suggestion 
+php artisan analyze:views
+in order to change blade views directly 
+hp artisan analyze:views --change
 
 ## Testing
 
