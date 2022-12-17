@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Zakarialabib\ConvertBootstrapToTailwind\ConvertBootstrapToTailwind;
+use Zakarialabib\ConvertBootstrapToTailwind\Core\CompareClass;
 
 class ConvertBootstrapToTailwindCommand extends Command
 {
@@ -16,7 +16,7 @@ class ConvertBootstrapToTailwindCommand extends Command
 
     public function handle(InputInterface $input, OutputInterface $output): int
     {
-        $comparer = new ConvertBootstrapToTailwind();
+        $comparer = new CompareClass();
 
         $viewFiles = $this->getViewFiles();
         foreach ($viewFiles as $viewFile) {
@@ -75,10 +75,4 @@ class ConvertBootstrapToTailwindCommand extends Command
         file_put_contents($filePath, $html);
     }
 
-     // public function handle(): int
-    // {
-    //     $this->comment('All done');
-
-    //     return self::SUCCESS;
-    // }
 }

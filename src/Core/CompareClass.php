@@ -1,10 +1,12 @@
 <?php
 
-namespace Zakarialabib\ConvertBootstrapToTailwind;
+namespace Zakarialabi\TranslatableStringExporter\Core;
 
-class ConvertBootstrapToTailwind
+use Symfony\Component\Finder\Finder;
+
+class CompareClass
 {
-    /**
+       /**
      * Map of Bootstrap class names to Tailwind class names.
      *
      * @var string[]
@@ -43,5 +45,5 @@ class ConvertBootstrapToTailwind
         }
 
         return $html;
-    }
+    }   
 }
