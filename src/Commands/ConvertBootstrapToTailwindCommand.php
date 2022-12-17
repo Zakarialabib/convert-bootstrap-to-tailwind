@@ -4,8 +4,6 @@ namespace Zakarialabib\ConvertBootstrapToTailwind\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
 use Zakarialabib\ConvertBootstrapToTailwind\Core\CompareClass;
 
 class ConvertBootstrapToTailwindCommand extends Command
