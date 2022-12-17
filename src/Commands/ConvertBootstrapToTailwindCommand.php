@@ -74,5 +74,4 @@ class ConvertBootstrapToTailwindCommand extends Command
     {
         file_put_contents($filePath, $html);
     }
-
 }

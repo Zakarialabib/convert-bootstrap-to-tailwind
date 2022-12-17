@@ -2,11 +2,9 @@
 
 namespace Zakarialabi\TranslatableStringExporter\Core;
 
-use Symfony\Component\Finder\Finder;
-
 class CompareClass
 {
-       /**
+    /**
      * Map of Bootstrap class names to Tailwind class names.
      *
      * @var string[]
@@ -45,5 +43,5 @@ class CompareClass
         }
 
         return $html;
-    }   
+    }
 }
