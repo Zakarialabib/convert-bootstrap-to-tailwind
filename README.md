@@ -17,11 +17,14 @@ composer require zakarialabib/convert-bootstrap-to-tailwind
 
 ## Usage
 
-in order to analayse blade views and get suggestion 
+If you want analayse blade views and get suggestions
+```bash
 php artisan analyze:views
-in order to change blade views directly 
+```
+You can also change classes in blade views directly 
+```bash
 hp artisan analyze:views --change
-
+```
 ## Testing
 
 ```bash
