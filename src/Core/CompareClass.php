@@ -160,7 +160,7 @@ class CompareClass
         'bg-primary' => 'bg-blue-500',
         'bg-secondary' => 'bg-gray-500',
         'bg-light' => 'bg-gray-100',
-        'bg-dark' => 'bg-gray-800', #
+        'bg-dark' => 'bg-gray-800', //
         'bg-muted' => 'bg-gray-200',  // or any muted color in your design
         'bg-white' => 'bg-white',
         'bg-success' => 'bg-green-500',
@@ -177,7 +177,6 @@ class CompareClass
         'shadow-sm' => 'shadow-sm',
         'shadow-lg' => 'shadow-lg',
         'box-shadow' => 'shadow',
-
 
         // Hover
         'hover:bg-primary' => 'hover:bg-blue-600',  // replace with your primary color
@@ -251,7 +250,7 @@ class CompareClass
         'text-truncate' => 'overflow-hidden overflow-ellipsis whitespace-nowrap',
         'text-highlight' => 'bg-yellow-200',  // Background color for highlighted text
         'text-emphasis' => 'font-bold',  // Emphasized text
-        
+
         // Text Transformation
         'text-lowercase' => 'lowercase',
         'text-uppercase' => 'uppercase',
@@ -285,7 +284,6 @@ class CompareClass
         'btn-outline-warning' => 'border-yellow-500 text-yellow-500 hover:bg-yellow-50',
         'btn-outline-info' => 'border-teal-500 text-teal-500 hover:bg-teal-50',
 
-
         // Cards
         'card' => 'rounded-md',
         'card-header' => 'bg-gray-100',
@@ -302,18 +300,18 @@ class CompareClass
         'card-img-top' => 'rounded-t-md',
         'card-img-bottom' => 'rounded-b-md',
 
-        # Custom select
+        // Custom select
         'custom-select' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
         'custom-file-input' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
 
-        # Dropdown
+        // Dropdown
         'dropdown-item' => 'block w-full',
         'dropdown-menu' => 'z-50',
         'dropdown-toggle' => 'relative',
         'dropdown-divider' => 'my-2 border-t',  // Divider between dropdown items
         'dropdown-header' => 'text-gray-500 font-bold',  // Styling for dropdown header
-        
-        # Form
+
+        // Form
         'form-group' => 'my-6',
         'form-group-error' => 'text-red-500',  // Text color for form group error m
         'form-check' => 'items-center mx-2',
@@ -498,13 +496,12 @@ class CompareClass
     /**
      * Convert Bootstrap class names to Tailwind class names in an HTML string.
      *
-     * @param  string  $html
      * @return string
      */
     public function compare(string $html)
     {
         // Extract all Bootstrap class names from the HTML
-        preg_match_all('/\b(' . implode('|', array_keys(self::BOOTSTRAP_CLASSES)) . ')\b/', $html, $matches);
+        preg_match_all('/\b('.implode('|', array_keys(self::BOOTSTRAP_CLASSES)).')\b/', $html, $matches);
         $bootstrapClassNames = $matches[0];
 
         // Replace each Bootstrap class name with its corresponding Tailwind class name
