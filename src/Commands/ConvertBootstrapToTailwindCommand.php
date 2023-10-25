@@ -55,7 +55,6 @@ class ConvertBootstrapToTailwindCommand extends Command
     /**
      * Get the HTML from a file.
      *
-     * @param  string  $filePath
      * @return string
      */
     protected function getHtmlFromFile(string $filePath)
@@ -66,8 +65,6 @@ class ConvertBootstrapToTailwindCommand extends Command
     /**
      * Write HTML to a file.
      *
-     * @param  string  $filePath
-     * @param  string  $html
      * @return void
      */
     protected function writeHtmlToFile(string $filePath, string $html)

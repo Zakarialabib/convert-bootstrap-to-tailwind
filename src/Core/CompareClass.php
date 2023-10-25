@@ -199,7 +199,6 @@ class CompareClass
         'shadow-lg' => 'shadow-lg',
         'box-shadow' => 'shadow',
 
-
         // Hover
         'hover:bg-primary' => 'hover:bg-blue-600', 
         'hover:text-primary' => 'hover:text-blue-600',
@@ -327,11 +326,11 @@ class CompareClass
         'card-img-top' => 'rounded-t-md',
         'card-img-bottom' => 'rounded-b-md',
 
-        # Custom select
+        // Custom select
         'custom-select' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
         'custom-file-input' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
 
-        # Dropdown
+        // Dropdown
         'dropdown-item' => 'block w-full',
         'dropdown-menu' => 'z-50',
         'dropdown-toggle' => 'relative',
@@ -523,13 +522,12 @@ class CompareClass
     /**
      * Convert Bootstrap class names to Tailwind class names in an HTML string.
      *
-     * @param  string  $html
      * @return string
      */
     public function compare(string $html)
     {
         // Extract all Bootstrap class names from the HTML
-        preg_match_all('/\b(' . implode('|', array_keys(self::BOOTSTRAP_CLASSES)) . ')\b/', $html, $matches);
+        preg_match_all('/\b('.implode('|', array_keys(self::BOOTSTRAP_CLASSES)).')\b/', $html, $matches);
         $bootstrapClassNames = $matches[0];
 
         // Replace each Bootstrap class name with its corresponding Tailwind class name
