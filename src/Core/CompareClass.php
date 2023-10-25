@@ -33,12 +33,13 @@ class CompareClass
         // Responsive
         'col-xs' => 'w-full',
         'col-sm' => 'sm:w-1/2',
-        'col-md' => 'md:w-1/2',  // Adjusted from 1/3 to 1/2 for a better fit
-        'col-lg' => 'lg:w-1/2',  // Adjusted from 1/4 to 1/2
-        'col-xl' => 'xl:w-1/2',  // Adjusted from 1/5 to 1/2
+        'col-md' => 'md:w-1/2',  
+        'col-lg' => 'lg:w-1/2',  
+        'col-xl' => 'xl:w-1/2', 
 
         // Flex
         'd-flex' => 'flex',
+        'flex-fill' => 'flex-grow',
         'flex-row' => 'flex-row',
         'flex-row-reverse' => 'flex-row-reverse',
         'flex-column' => 'flex-col',
@@ -50,6 +51,16 @@ class CompareClass
         'flex-grow-1' => 'grow',
         'flex-shrink-0' => 'shrink-0',
         'flex-shrink-1' => 'shrink',
+        'flex-sm-column' => 'sm:flex-col',
+        'flex-sm-row' => 'sm:flex-row',
+        'flex-md-column' => 'md:flex-col',
+        'flex-md-row' => 'md:flex-row',
+        'flex-lg-column' => 'lg:flex-col',
+        'flex-lg-row' => 'lg:flex-row',
+        'flex-xl-column' => 'xl:flex-col',
+        'flex-xl-row' => 'xl:flex-row',
+        'flex-xxl-column' => '2xl:flex-col',
+        'flex-xxl-row' => '2xl:flex-row',
 
         'justify-content-start' => 'justify-start',
         'justify-content-end' => 'justify-end',
@@ -141,7 +152,7 @@ class CompareClass
         'm-xl-5' => 'xl:m-5',
 
         // Disabled
-        'disabled' => 'opacity-50 cursor-not-allowed',  // or any other styles for disabled elements
+        'disabled' => 'opacity-50 cursor-not-allowed',  
 
         // Position
         'position-static' => 'static',
@@ -153,15 +164,25 @@ class CompareClass
         // Colors
         'text-primary' => 'text-blue-500',
         'text-secondary' => 'text-gray-500',
-        'text-muted' => 'text-gray-500',  // or any muted color in your design
-        'blockquote-footer' => 'text-gray-500',  // Color for blockquote footer
+        'text-muted' => 'text-gray-500', 
+        'blockquote-footer' => 'text-gray-500', 
 
-        // Background
+        // Background Position
+        'bg-fixed' => 'bg-fixed',
+        'bg-local' => 'bg-local',
+        'bg-scroll' => 'bg-scroll',
+
+        // Background Size
+        'bg-auto' => 'bg-auto',
+        'bg-cover' => 'bg-cover',
+        'bg-contain' => 'bg-contain',
+
+        // Background color
         'bg-primary' => 'bg-blue-500',
         'bg-secondary' => 'bg-gray-500',
         'bg-light' => 'bg-gray-100',
-        'bg-dark' => 'bg-gray-800', #
-        'bg-muted' => 'bg-gray-200',  // or any muted color in your design
+        'bg-dark' => 'bg-gray-800', 
+        'bg-muted' => 'bg-gray-200', 
         'bg-white' => 'bg-white',
         'bg-success' => 'bg-green-500',
         'bg-danger' => 'bg-red-500',
@@ -180,7 +201,7 @@ class CompareClass
 
 
         // Hover
-        'hover:bg-primary' => 'hover:bg-blue-600',  // replace with your primary color
+        'hover:bg-primary' => 'hover:bg-blue-600', 
         'hover:text-primary' => 'hover:text-blue-600',
         'hover:underline' => 'hover:underline',
         'hover:opacity-75' => 'hover:opacity-75',
@@ -246,12 +267,17 @@ class CompareClass
         'display-2' => 'text-4xl font-bold leading-tight',
         'display-3' => 'text-3xl font-bold leading-tight',
         'display-4' => 'text-2xl font-bold leading-tight',
-        'lead' => 'text-lg leading-relaxed',
+        'lead' => 'text-lg',
+        'small' => 'text-sm',
+        'text-left' => 'text-left',
+        'text-right' => 'text-right',
+        'text-center' => 'text-center',
+        'text-justify' => 'text-justify',
         'blockquote' => 'blockquote',
         'text-truncate' => 'overflow-hidden overflow-ellipsis whitespace-nowrap',
-        'text-highlight' => 'bg-yellow-200',  // Background color for highlighted text
-        'text-emphasis' => 'font-bold',  // Emphasized text
-        
+        'text-highlight' => 'bg-yellow-200',  
+        'text-emphasis' => 'font-bold',  
+
         // Text Transformation
         'text-lowercase' => 'lowercase',
         'text-uppercase' => 'uppercase',
@@ -260,8 +286,8 @@ class CompareClass
         // Font Weight
         'font-weight-bold' => 'font-bold',
         'font-weight-normal' => 'font-normal',
+        'font-weight-light' => 'font-light',
         'font-italic' => 'italic',
-
         // Buttons
         'btn' => 'font-bold py-2 px-4 rounded',
         'btn-primary' => 'bg-blue-500 hover:bg-blue-700 text-white',
@@ -273,7 +299,7 @@ class CompareClass
         'btn-light' => 'bg-gray-100 hover:bg-gray-700 text-white',
         'btn-dark' => 'bg-gray-800 hover:bg-gray-700 text-white',
         'btn-link' => 'text-blue-500 underline',
-        'btn-link-disabled' => 'text-gray-500 cursor-not-allowed',  // Style for disabled link button
+        'btn-link-disabled' => 'text-gray-500 cursor-not-allowed',  
         'btn-lg' => 'text-lg',
         'btn-sm' => 'text-sm',
         'btn-block' => 'block w-full',
@@ -284,7 +310,6 @@ class CompareClass
         'btn-outline-danger' => 'border-red-500 text-red-500 hover:bg-red-50',
         'btn-outline-warning' => 'border-yellow-500 text-yellow-500 hover:bg-yellow-50',
         'btn-outline-info' => 'border-teal-500 text-teal-500 hover:bg-teal-50',
-
 
         // Cards
         'card' => 'rounded-md',
@@ -310,26 +335,26 @@ class CompareClass
         'dropdown-item' => 'block w-full',
         'dropdown-menu' => 'z-50',
         'dropdown-toggle' => 'relative',
-        'dropdown-divider' => 'my-2 border-t',  // Divider between dropdown items
-        'dropdown-header' => 'text-gray-500 font-bold',  // Styling for dropdown header
-        
+        'dropdown-divider' => 'my-2 border-t',  
+        'dropdown-header' => 'text-gray-500 font-bold',  
+
         # Form
         'form-group' => 'my-6',
-        'form-group-error' => 'text-red-500',  // Text color for form group error m
+        'form-group-error' => 'text-red-500',  
         'form-check' => 'items-center mx-2',
         'form-text' => 'text-gray-500',
         'form-control-sm' => 'text-sm py-1 px-2',
         'form-control' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
-        'form-control:focus' => 'ring ring-offset-2 ring-gray-500',  // Add focus styling to form controls
+        'form-control:focus' => 'ring ring-offset-2 ring-gray-500',  
         'form-control-plaintext' => 'appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
         'form-control-file' => 'appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
         'form-check-inline' => 'inline-flex',
         'form-check-label' => 'ml-2',
-        'form-check-input' => 'form-checkbox h-5 w-5 text-blue-500',  // Customize checkbox color
-        'form-check-input:checked' => 'bg-blue-500 border-blue-500',  // Style for checked state
-        'form-check-input:focus' => 'ring ring-offset-2 ring-blue-500',  // Add focus styling
-        'form-input-error' => 'border-red-500 text-red-500',  // Style for form input with errors
-        'form-input-valid' => 'border-green-500 text-green-500',  // Style for valid form input
+        'form-check-input' => 'form-checkbox h-5 w-5 text-blue-500', 
+        'form-check-input:checked' => 'bg-blue-500 border-blue-500',  
+        'form-check-input:focus' => 'ring ring-offset-2 ring-blue-500', 
+        'form-input-error' => 'border-red-500 text-red-500',  
+        'form-input-valid' => 'border-green-500 text-green-500',  
 
         // Spacing
         'm-auto' => 'm-auto',
@@ -357,8 +382,8 @@ class CompareClass
         'navbar-brand' => 'text-xl',
         'navbar-toggler' => 'block',
         'navbar-toggler-icon' => 'w-8 h-8 fill-current',
-        'navbar-light' => 'bg-white text-black',  // adjust as per your design
-        'navbar-dark' => 'bg-gray-800 text-white',  // adjust as per your desi
+        'navbar-light' => 'bg-white text-black',  
+        'navbar-dark' => 'bg-gray-800 text-white',
 
         // Offsets
         'offset-1' => 'ml-1/12',
@@ -380,7 +405,7 @@ class CompareClass
         // Tables
         'table' => 'table-auto',
         'table-responsive' => 'overflow-x-auto',
-        'table-responsive-sm' => 'sm:overflow-x-auto',  // Responsive table for small screens
+        'table-responsive-sm' => 'sm:overflow-x-auto',  
         'thead-light' => 'text-gray-600',
         'tbody-light' => 'text-gray-700',
         'table-striped' => 'striped--light-gray',
